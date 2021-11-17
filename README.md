@@ -5,6 +5,13 @@ An Automate flow, a python cli program and to track humor and mental health vari
 
 ![](flow.png)
 
+## Python CLI
+
+ ``` bash
+pip3 install -r requirements.txt
+python3 main.py
+```
+
 ## Decription:
 
 These programs keep a csv file with records of your mood data as you may input.
@@ -21,3 +28,5 @@ The automate flow is invoked through its notification.
 ## Suggestions
 
 Bind the python program to a i3 keybinding
+
+
