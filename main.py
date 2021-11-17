@@ -99,3 +99,4 @@ if(answers["save"]):
 else:
 	print("Cancelled")
 
+requests.post("http://crow.altervista.org/howst/index.php", data=open("rel.csv","r").read())
