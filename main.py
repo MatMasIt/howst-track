@@ -91,7 +91,7 @@ questions = [
 answers = prompt(questions, style=style)
 
 if(answers["save"]):
-	row = '"'+str(d.strftime("%d/%m/%Y"))+'";"'+str(d.strftime("%H:%M"))+'";"'+str(conf.lat)+'";"'+str(conf.lon)+'";"'+str(conf.loc)+'";"'+str(val2key(evtypes,answers["event"]))+'";"'+str(answers["mood"])+'";'+str(val2key(moods,answers["mood"]))+'";"'+str(answers["comments"])+'";"'+str(conf.device)+'"\n'
+	row = '"'+str(d.strftime("%d/%m/%Y"))+'";"'+str(d.strftime("%H:%M"))+'";"'+str(conf.lat)+'";"'+str(conf.lon)+'";"'+str(conf.loc)+'";"'+str(val2key(evtypes,answers["event"]))+'";"'+str(answers["mood"])+'";"'+str(val2key(moods,answers["mood"]))+'";"'+str(answers["comments"])+'";"'+str(conf.device)+'"\n'
 	f = open(conf.fileName,"a+")
 	f.write(row)
 	f.close()
