@@ -1,5 +1,5 @@
 # howst-track
-An Automate flow to track humor and mental health variables
+An Automate flow, a python cli program and to track humor and mental health variables
 
 ## Flow
 
@@ -7,7 +7,9 @@ An Automate flow to track humor and mental health variables
 
 ## Decription:
 
-This automate flow keeps a csv file with records of your mood data as you may input through the notification.
+These programs keep a csv file with records of your mood data as you may input.
+
+The automate flow is invoked through its notification.
 
 ## Use case:
 
@@ -16,3 +18,6 @@ This automate flow keeps a csv file with records of your mood data as you may in
 * general purpose health-logging
 
 
+## Suggestions
+
+Bind the python program to a i3 keybinding
