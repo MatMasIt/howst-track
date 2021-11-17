@@ -31,6 +31,6 @@ The automate flow is invoked through its notification.
 
 ## Suggestions
 
-Bind the python program to a i3 keybinding
+Bind the python program to an i3 keybinding
 
 
