@@ -12,6 +12,10 @@ pip3 install -r requirements.txt
 python3 main.py
 ```
 
+
+[![asciicast](https://asciinema.org/a/gCMkjXSLEwoZ2oL9oY9vVRrWd.svg)](https://asciinema.org/a/gCMkjXSLEwoZ2oL9oY9vVRrWd)
+
+
 ## Decription:
 
 These programs keep a csv file with records of your mood data as you may input.
