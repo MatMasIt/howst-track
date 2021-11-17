@@ -2,7 +2,7 @@
 An Automate flow, a python cli program and to track humor and mental health variables
 
 ## Flow
-
+[Install on Automate](https://llamalab.com/automate/community/flows/40914)
 ![](flow.png)
 
 ## Python CLI
